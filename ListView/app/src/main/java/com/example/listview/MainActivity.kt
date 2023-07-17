@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
             val selectItem = parent.getItemAtPosition(position) as User  //모델형태
             Toast.makeText(this,selectItem.name,Toast.LENGTH_SHORT).show()
         }
-
+  //Test
     }
     override fun onDestroy() {
         mBinding = null
