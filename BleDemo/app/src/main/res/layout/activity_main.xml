@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="end"
+    android:orientation="vertical"
+    tools:context=".MainActivity.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|right"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/TextView_BluetoothName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="Bluetooth_name"
+            android:textColor="@color/title_name_test1"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/bluetooth_icon_on" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/FrameLayout_View"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/BottomNavigationView_SelectButton"
+            android:layout_marginBottom="-26dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_device_list"
+                android:layout_width="match_parent"
+                android:layout_height="441dp"
+                android:scrollbarFadeDuration="0"
+                android:scrollbarSize="5dp"
+                android:scrollbarThumbVertical="@android:color/darker_gray"
+                android:scrollbars="vertical" />
+
+            <Button
+                android:id="@+id/search_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:insetTop="300dp" />
+
+
+        </FrameLayout>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/BottomNavigationView_SelectButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:menu="@menu/bottom_navigation" />
+
+    </RelativeLayout>
+
+</LinearLayout>
